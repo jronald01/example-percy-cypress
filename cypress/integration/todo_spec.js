@@ -21,7 +21,7 @@ describe('TodoMVC', function() {
 
     // Add a new todo item.
     cy.get('.new-todo').should('exist')
-    cy.get('.new-todo').type('New fancy todo {enter}')
+    cy.get('.new-todo').type('New fancy blah todo {enter}')
     // Take a Percy snapshot with different browser widths.
     cy.percySnapshot('New todo test')
 
@@ -32,7 +32,7 @@ describe('TodoMVC', function() {
 
   it('Lets you check off a todo', function() {
     // Enter a new todo.
-    cy.get('.new-todo').type('A thing to accomplish {enter}')
+    cy.get('.new-todo').type('A thing to acomplish {enter}')
     cy.get('.todo-count').should('contain', '1 item left')
 
     // Click it off -- it should be marked as completed.
